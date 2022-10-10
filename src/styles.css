@@ -19,3 +19,8 @@ body {
   --bs-table-bg: var(--bs-orange-100);
   --bs-table-border-color: purple;
 }
+.active{
+  color: rgb(130, 56, 199);
+  border: 0cm;
+  border-color: black;
+}
