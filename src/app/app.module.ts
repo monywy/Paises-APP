@@ -7,9 +7,10 @@ import { HelloComponent } from './hello.component';
 import { PaisModule } from './pais/pais.module';
 import { SharedModule } from './shared/shared.module';
 
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule,PaisModule,SharedModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  declarations: [ AppComponent, HelloComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
