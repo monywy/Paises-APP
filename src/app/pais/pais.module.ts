@@ -8,7 +8,7 @@ import { PorCapitalComponent } from './pages/por-Capital/por-capital.component';
 
 
 @NgModule({
-  
+  //Declaración y exportacion de todos los componentes de la carpeta.
   declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   imports: [
