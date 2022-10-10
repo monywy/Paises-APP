@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PorpaisComponent {
 
-  termino: string="";
+  termino: string = '';
 
   constructor() { }
 
