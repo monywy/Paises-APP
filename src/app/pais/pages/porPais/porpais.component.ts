@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './porpais.component.html',
   styleUrls: ['./porpais.component.css']
 })
-export class PorpaisComponent implements OnInit {
+export class PorpaisComponent {
+
+  termino: string="";
 
   constructor() { }
 
-  ngOnInit() {
+  buscar(){
+    console.log(this.termino);
   }
 
 }

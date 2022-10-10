@@ -5,6 +5,7 @@ import { PorpaisComponent } from './pages/porPais/porpais.component';
 import { PorregionComponent } from './pages/porRegion/porregion.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { PorCapitalComponent } from './pages/por-Capital/por-capital.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { PorCapitalComponent } from './pages/por-Capital/por-capital.component';
   declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ]
 })
 export class PaisModule { }
