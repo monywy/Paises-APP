@@ -46,7 +46,7 @@ const routes: Routes = [
   ],
 
   exports:[
-   RouterModule
+   RouterModule //se debe de importar a los modulos donde se utiliza
   ]
 })
 
