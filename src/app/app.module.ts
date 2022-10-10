@@ -7,11 +7,12 @@ import { HelloComponent } from './hello.component';
 import { PaisModule } from './pais/pais.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   //Declaracion de todos los modulos
-  imports:      [ BrowserModule, FormsModule,PaisModule,SharedModule,AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule,PaisModule,SharedModule,AppRoutingModule,HttpClientModule ],
   declarations: [ AppComponent, HelloComponent],
   bootstrap:    [ AppComponent ]
 })
