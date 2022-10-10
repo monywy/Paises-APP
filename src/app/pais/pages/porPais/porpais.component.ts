@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Country } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 
 @Component({
@@ -9,8 +10,11 @@ import { PaisService } from '../../services/pais.service';
 export class PorpaisComponent {
 //  Manejo de errores de la peticion a la API
    hayError: boolean = false;
+   termino: string = '';
 
-  termino: string = '';
+   //Mostrar información en la tabla
+   paises : Country[] = [];
+
 
   constructor(private paisservice: PaisService) { }
 
@@ -19,13 +23,14 @@ export class PorpaisComponent {
     this.hayError = false;
     console.log(this.termino);
     this.paisservice.buscarPais(this.termino)
-    .subscribe ( resp => {
-      console.log(resp);
+    .subscribe ( paises => {
+      console.log(paises);
+      paises= this.paises;
 
     },(err) => {
     //metodo para controlar errores con .suscribe 
       this.hayError = true;
-
+      this.paises = [];
       }); 
 
   }
