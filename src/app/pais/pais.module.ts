@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
   declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   imports: [
-    CommonModule, FormsModule,RouterModule
+    CommonModule, FormsModule, RouterModule
   ]
 })
 export class PaisModule { }
