@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Country } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 
@@ -25,7 +25,7 @@ export class PorpaisComponent {
     this.paisservice.buscarPais(this.termino)
     .subscribe ( paises => {
       console.log(paises);
-      paises= this.paises;
+      this.paises= paises;
 
     },(err) => {
     //metodo para controlar errores con .suscribe 
