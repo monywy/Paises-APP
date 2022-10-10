@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   //Declaracion de todos los modulos
   imports:      [ BrowserModule, FormsModule,PaisModule,SharedModule,AppRoutingModule,HttpClientModule ],

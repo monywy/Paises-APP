@@ -12,8 +12,8 @@ import { PaisTablaComponent } from './component/pais-tabla/pais-tabla.component'
 
 @NgModule({
   //Declaración y exportacion de todos los componentes de la carpeta.
-  declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent, PaisTablaComponent],
-  exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent,PaisTablaComponent],
+  declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
+  exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent],
   imports: [
     CommonModule, FormsModule, RouterModule
   ]
