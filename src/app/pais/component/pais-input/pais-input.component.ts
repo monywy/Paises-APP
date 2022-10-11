@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject,debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-pais-input',
@@ -16,7 +16,13 @@ export class PaisInputComponent implements OnInit {
    debouncer: Subject<string> = new Subject();
    //suscribcion al debouncer mediante el ngOnInit
    ngOnInit(){
-     this.debouncer.subscribe(valor =>{
+     this.debouncer
+      //Método para transformar la salida del suscribe
+     .pipe(
+       //No hacer el suscribir hasta que se dejen de emitir valores por ese lapso de tiempo
+       debounceTime(300)
+     )
+     .subscribe(valor =>{
       console.log('debouncer:',valor);
      });
    }
