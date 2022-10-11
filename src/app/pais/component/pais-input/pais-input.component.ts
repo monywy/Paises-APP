@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Subject,debounceTime } from 'rxjs';
 
 @Component({
@@ -8,6 +8,10 @@ import { Subject,debounceTime } from 'rxjs';
 })
 export class PaisInputComponent implements OnInit {
   termino: string = ''; //termino de la caja de texto
+
+  //Recibir el input para mostrar en cada caja de texto.
+  @Input() placeholder: string ='';
+
   //Emisión del termino de la caja de texto
   @Output() onEnter: EventEmitter<string>= new EventEmitter();
   // Detectar el termino que se esta escribiendo
