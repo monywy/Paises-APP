@@ -35,13 +35,6 @@ export class PorCapitalComponent {
 
   }
 
-  //Método para mostrar las sugerencias conforme voy escribiendo
-  sugerencias(termino: string){
-    //validación de errores
-    this.hayError = false;
-
-  }
-
   
 
 }
