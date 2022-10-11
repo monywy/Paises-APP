@@ -19,11 +19,12 @@ export class PaisInputComponent implements OnInit {
      this.debouncer
       //Método para transformar la salida del suscribe
      .pipe(
-       //No hacer el suscribir hasta que se dejen de emitir valores por ese lapso de tiempo
+       //No hacer el suscribir hasta que se dejen de emitir valores por ese lapso de tiempo (milesimas de segundo)
        debounceTime(300)
      )
      .subscribe(valor =>{
       console.log('debouncer:',valor);
+      this.onDebounce.emit( valor );
      });
    }
 
