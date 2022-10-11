@@ -5,7 +5,7 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-porpais',
   templateUrl: './porpais.component.html',
-  styleUrls: ['./porpais.component.css']
+  styleUrls: []
 })
 export class PorpaisComponent {
  //Manejo de errores de la peticion a la API
