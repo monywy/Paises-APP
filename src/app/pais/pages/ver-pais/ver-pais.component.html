@@ -5,20 +5,24 @@
 
 <ng-template #divPais>
 <div class="row">
-<div class="col-12">
-<tr> 
+<div class="col-4">
+  <h3>Bandera</h3>
+  <img [src]="pais.flags.svg" class="small-flag" alt="Imagen"  />
+</div>
 
-<td>{{ 1 }}</td>
+<div class="col">
+<h3>Información</h3>
+<ul class="list-group">
+  <li class="list-group-item">
+    <strong>Población</strong>{{pais.population | number }}
+  </li> 
+  <li  class="list-group-item">
+  <strong>Código Numérico</strong> {{pais.area}}
+  </li>
 
-<td><img [src]="pais.flags.svg" class="small-flag" alt="Imagen"></td>
 
-<td>{{pais.name.common}}</td>
+</ul>
 
-<td>{{pais.population | number}}</td>
-
-<td><a [routerLink]="['/pais', pais.cca2]">Ver...</a></td>
-
-</tr>
 </div>
 
 </div>
