@@ -24,6 +24,7 @@ export class PaisInputComponent implements OnInit {
      )
      .subscribe(valor =>{
       console.log('debouncer:',valor);
+      //Se emite el valor recibido
       this.onDebounce.emit( valor );
      });
    }
