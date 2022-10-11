@@ -8,7 +8,7 @@ import { PaisService } from '../../services/pais.service';
   styleUrls: ['./porpais.component.css']
 })
 export class PorpaisComponent {
-//  Manejo de errores de la peticion a la API
+ //Manejo de errores de la peticion a la API
    hayError: boolean = false;
    termino: string = '';
 
