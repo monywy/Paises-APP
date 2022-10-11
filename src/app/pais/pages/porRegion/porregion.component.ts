@@ -12,13 +12,17 @@ import { Component, OnInit } from '@angular/core';
     `
   ]
 })
-export class PorregionComponent implements OnInit {
+export class PorregionComponent {
 
   regiones: string[] = [ 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  regionActiva: string = '';
 
   constructor() { }
 
-  ngOnInit() {
+  activarRegion(region: string){
+    this.regionActiva = region;
   }
+
+  
 
 }
