@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pais-input',
@@ -7,11 +7,17 @@ import { Component } from '@angular/core';
 })
 export class PaisInputComponent  {
 
+  //Emisión del termino de la caja de texto
+
+  @Output() onEnter: EventEmitter<string>= new EventEmitter();
+
+
  termino: string = '';
 
 
  buscar(){
-   
+   //Emite el termino con la funcion creada
+   this.onEnter.emit(this.termino);
  }
 
  
