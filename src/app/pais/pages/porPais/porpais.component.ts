@@ -18,7 +18,7 @@ export class PorpaisComponent {
 
   constructor(private paisservice: PaisService) { }
 
-  buscar(){
+  buscar( termino: string){
     //sino hay un error
     this.hayError = false;
     console.log(this.termino);
