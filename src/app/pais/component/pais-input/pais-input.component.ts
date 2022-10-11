@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pais-input',
   templateUrl: './pais-input.component.html',
   styleUrls: []
 })
-export class PaisInputComponent implements OnInit {
+export class PaisInputComponent  {
 
-  constructor() { }
+ termino: string = '';
 
-  ngOnInit() {
-  }
+
+ buscar(){
+   
+ }
+
+ 
 
 }
