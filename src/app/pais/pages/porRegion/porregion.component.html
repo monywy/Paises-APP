@@ -5,10 +5,6 @@
   <div class="col">
     <button *ngFor="let region of regiones"
     class="btn btn-outline-primary"
-    [ngClass]="
-     'btn-primary': regionActiva == region,
-     'btn-outline-primary': regionActiva !== region
-    "
     (click)="activarRegion( region )">
     {{ region }}
     </button>
