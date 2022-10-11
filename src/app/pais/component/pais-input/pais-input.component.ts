@@ -9,8 +9,8 @@ import { Subject } from 'rxjs';
 export class PaisInputComponent implements OnInit {
   termino: string = ''; //termino de la caja de texto
   //Emisión del termino de la caja de texto
-
   @Output() onEnter: EventEmitter<string>= new EventEmitter();
+  // Detectar el termino que se esta escribiendo
   @Output() onDebounce: EventEmitter<string>= new EventEmitter();
   //  debouncer es un observable especial para detectar un evento
    debouncer: Subject<string> = new Subject();
