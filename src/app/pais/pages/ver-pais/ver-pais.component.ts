@@ -11,7 +11,7 @@ import { Country } from '../../interfaces/pais.interface';
 })
 export class VerPaisComponent implements OnInit {
 
-   pais!: Country;
+   pais: Country;
 
   //Para suscribirnos a cualquier cambio del URL
   constructor(
