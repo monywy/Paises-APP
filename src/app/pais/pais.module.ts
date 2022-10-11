@@ -8,12 +8,13 @@ import { PorCapitalComponent } from './pages/por-Capital/por-capital.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PaisTablaComponent } from './component/pais-tabla/pais-tabla.component';
+import { PaisInputComponent } from './component/pais-input/pais-input.component';
 
 
 @NgModule({
   //Declaración y exportacion de todos los componentes de la carpeta.
-  declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent,PaisTablaComponent],
-  exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent,PaisTablaComponent],
+  declarations: [PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent,PaisTablaComponent,PaisInputComponent],
+  exports:[PorCapitalComponent,PorpaisComponent,PorregionComponent,VerPaisComponent,PaisTablaComponent,PaisInputComponent],
   imports: [
     CommonModule, FormsModule, RouterModule
   ]
