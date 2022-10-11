@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PaisService } from '../../services/pais.service';
-import { switchMap }  from 'rxjs/operators'; //Permite recibir un observable y regresar un observable
+import { switchMap,tap }  from 'rxjs/operators'; //Permite recibir un observable y regresar un observable
+import { Country } from '../../interfaces/pais.interface';
 
 @Component({
   selector: 'app-ver-pais',
@@ -9,6 +10,8 @@ import { switchMap }  from 'rxjs/operators'; //Permite recibir un observable y r
   styleUrls: []
 })
 export class VerPaisComponent implements OnInit {
+
+   pais!: Country;
 
   //Para suscribirnos a cualquier cambio del URL
   constructor(
@@ -35,11 +38,12 @@ export class VerPaisComponent implements OnInit {
      //Uso de operadores de rxjs
      .pipe(
        //Recibe el valor del observable anterior y retorna un nuevo observable
-       switchMap( (params)=> this.paisServices.getPaisPorAlpha(params.id) )
+       switchMap( (params)=> this.paisServices.getPaisPorAlpha(params.id) ),
+       //Se recibe la respuesta con el tap e imprime en consola lo que responda
+       tap(console.log)
+
      )
-     .subscribe(resp=>{
-      console.log(resp)
-     });
+     .subscribe(pais => this.pais = pais);
 
   }
 
