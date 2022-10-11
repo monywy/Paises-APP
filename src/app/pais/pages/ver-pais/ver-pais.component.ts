@@ -18,6 +18,7 @@ export class VerPaisComponent implements OnInit {
   //Se ejecuita cuando el componente esta inicializado
   ngOnInit():void {
     this.activatedRounter.params
+    //Manejos de valores dependientes de un observable
     .subscribe( ({ id }) =>{
       console.log(id);
 
