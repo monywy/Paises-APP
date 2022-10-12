@@ -48,7 +48,7 @@ export class PorpaisComponent {
   sugerencias(termino: string){
     //validación de errores
     this.hayError = false;
-
+    this.termino = termino;
     //Consultar sugerencias de busqueda
     this.paisservice.buscarPais (termino)
     .subscribe ( paises => this.paisesSugeridos = paises.splice(0,5),
