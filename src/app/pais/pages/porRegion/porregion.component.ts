@@ -31,6 +31,9 @@ export class PorregionComponent {
 
   activarRegion(region: string) {
     this.regionActiva = region;
-    this.paisServices.buscarRegion(region);
+    this.paisServices.buscarRegion(region)
+    .subscribe(paises => this.paises = paises);
+    
+
   }
 }
