@@ -51,7 +51,9 @@ export class PorpaisComponent {
 
     //Consultar sugerencias de busqueda
     this.paisservice.buscarPais (termino)
-    .subscribe ( paises => this.paisesSugeridos = paises.splice(0,5));
+    .subscribe ( paises => this.paisesSugeridos = paises.splice(0,5),
+    (err) => this.paisesSugeridos = []
+    );
 
   }
 
