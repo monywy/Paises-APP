@@ -15,7 +15,8 @@
 
 <!-- Vista de las sugerencias -->
 
-<ul class="list-group">
+<ul *ngIf="mostrarSug" 
+class="list-group">
 <li *ngFor="let pais of paisesSugeridos"
 class="list-group-item list-group-item-action"
 (click)="buscarSug( termino )">
