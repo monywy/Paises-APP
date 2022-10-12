@@ -42,4 +42,12 @@ export class PaisService {
 
   }
 
+  //Método para buscar por Cápital
+  buscarRegion( termino:string ): Observable<Country[]>{
+
+    const url = `${this.apiUrl}/region/${ termino }`
+    return this.http.get<Country[]>(url);
+
+  }
+
 }
