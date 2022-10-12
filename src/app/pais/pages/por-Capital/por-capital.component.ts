@@ -52,4 +52,10 @@ export class PorCapitalComponent {
     );
   }
 
+  //Método para buscar la sugerencia
+  buscarSug(termino: string){
+    this.buscar(termino)
+    
+   }
+
 }
