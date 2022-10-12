@@ -47,6 +47,7 @@ export class PorpaisComponent {
 
   //Método para mostrar las sugerencias conforme voy escribiendo
   sugerencias(termino: string){
+    this.mostrarSug = true;
     //validación de errores
     this.hayError = false;
     this.termino = termino;
