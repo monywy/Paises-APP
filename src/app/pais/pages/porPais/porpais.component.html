@@ -16,8 +16,9 @@
 <!-- Vista de las sugerencias -->
 
 <ul class="list-group">
-<li class="list-group-item list-group-item-action">
- nombre país
+<li *ngFor="let pais of paisesSugeridos"
+class="list-group-item list-group-item-action">
+ {{ pais.name }}
 </li>
 </ul>
 
