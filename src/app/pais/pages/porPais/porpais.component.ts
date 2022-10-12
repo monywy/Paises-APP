@@ -28,6 +28,7 @@ export class PorpaisComponent {
   constructor(private paisservice: PaisService) { }
 
   buscar( termino: string){
+    this.mostrarSug = false;
     //sino hay un error
     this.hayError = false;
     this.termino = termino;
