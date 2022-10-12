@@ -15,6 +15,10 @@ export class PorCapitalComponent {
   //Mostrar información en la tabla
   paises : Country[] = [];
 
+  //Guardar los resultados de las sugerencias
+  paisesSugeridos : Country[] = [];
+  mostrarSug: boolean = false;
+
   constructor(private paisservice: PaisService) { }
 
   buscar( termino: string){
@@ -37,11 +41,15 @@ export class PorCapitalComponent {
 
   //Método para mostrar las sugerencias conforme voy escribiendo
   sugerencias(termino: string){
+    this.mostrarSug = true;
     //validación de errores
     this.hayError = false;
-
+    this.termino = termino;
+    //Consultar sugerencias de busqueda
+    this.paisservice.buscarPais (termino)
+    .subscribe ( paises => this.paisesSugeridos = paises.splice(0,5),
+    (err) => this.paisesSugeridos = []
+    );
   }
-
-  
 
 }
