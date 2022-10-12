@@ -23,6 +23,7 @@ export class PorpaisComponent {
 
    //Guardar los resultados de las sugerencias
    paisesSugeridos : Country[] = [];
+   mostrarSug: boolean = false;
 
   constructor(private paisservice: PaisService) { }
 
@@ -55,6 +56,12 @@ export class PorpaisComponent {
     (err) => this.paisesSugeridos = []
     );
 
+  }
+
+  //Método para buscar la sugerencia
+  buscarSug(termino: string){
+   this.buscar(termino)
+   
   }
 
 }
