@@ -5,7 +5,13 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-porpais',
   templateUrl: './porpais.component.html',
-  styleUrls: []
+  styles: [
+  `
+   li{
+     cursor: pounter;
+   }
+  `
+  ]
 })
 export class PorpaisComponent {
  //Manejo de errores de la peticion a la API
@@ -15,6 +21,8 @@ export class PorpaisComponent {
    //Mostrar información en la tabla
    paises : Country[] = [];
 
+   //Guardar los resultados de las sugerencias
+   paisesSugeridos : Country[] = [];
 
   constructor(private paisservice: PaisService) { }
 
@@ -40,6 +48,10 @@ export class PorpaisComponent {
   sugerencias(termino: string){
     //validación de errores
     this.hayError = false;
+
+    //Consultar sugerencias de busqueda
+    this.paisservice.buscarPais (termino)
+    .subscribe ( paises => this.paisesSugeridos = paises.splice(0,5));
 
   }
 
